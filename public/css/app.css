@@ -1,0 +1,76 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, label, input, select, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Set a base font size and family */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+/* Add some spacing and styling to the form container */
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style form inputs */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the datepicker input */
+.datepicker {
+    width: calc(100% - 22px); /* Adjust width to account for the datepicker button */
+    padding: 10px;
+    margin-bottom: 16px; /* Add margin between the datepicker and the button */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Style the submit button */
+.btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.form-error {
+    color: #d9534f; /* Red color for error messages */
+    font-size: 14px;
+    margin-top: 4px; /* Adjust the spacing above the error message */
+}
+
+/* Style the datepicker input with error */
+.datepicker.error {
+    border-color: #d9534f; /* Red border for the datepicker input with error */
+}

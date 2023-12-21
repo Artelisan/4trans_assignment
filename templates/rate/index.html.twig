@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Form Page</title>
+
+    {# Include the external CSS file #}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    {{ form_start(form) }}
+    <div>
+        {{ form_label(form.currency) }}
+        {{ form_widget(form.currency, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.currency, {'attr': {'class': 'form-error'}}) }}
+    </div>
+    <div>
+        {{ form_label(form.date) }}
+        {{ form_widget(form.date, {'attr': {'class': 'form-control datepicker'}}) }}
+        {{ form_errors(form.date, {'attr': {'class': 'form-error'}}) }}
+    </div>
+    <div>
+        {{ form_widget(form.get_rate, {'attr': {'class': 'btn btn-success'}}) }}
+    </div>
+    {{ form_end(form) }}
+
+    {% if rate is defined %}
+        <div class="result">
+            <p>Kurz pre {{ form.currency.vars.value }} voči EUR dňa {{ form.date.vars.value|date('d F Y') }} bol {{ rate }}</p>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
